@@ -1,6 +1,3 @@
 # Learning_Python
 
-1
-2
-3
-Testando!!!
+Repositório voltado para aprendizagem de Python seguindo o livro: Aprendendo Python (Lutz e Ascher);
