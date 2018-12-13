@@ -14,16 +14,16 @@ TIPO DE OBJETO  EXEMPLO DE LITERAIS
 Números         3.1415, 1234, 999L, 3 + 4j
 Strings         'spam', "guido's"
 Listas          {1, [2, 'three'], 4}
-Dicionários  	{'food' : 'spam' : 'yum'}
+Dicionários     {'food' : 'spam' : 'yum'}
 Tuplas          (1, 'spam', 4, 'U')
 Arquivos        text = open('eggs', 'r').read()
 '''
 
 '''
 LITERAL                      INTERPRETAÇÃO
-1234, -24, 0				 Inteiros normais (long em C)
+1234, -24, 0                 Inteiros normais (long em C)
 999999999999L                Inteiros longos (tamanho ilimitado)
-1.23, 3.14e-10, 4E210	     Ponto flutuante (double em C)
+1.23, 3.14e-10, 4E210        Ponto flutuante (double em C)
 0177, 0x9ff, 0xFF            Literais em octal e hexadecimal
 3 + 4j, 3.0 + 4.0j, 3J       Literais numéricas complexas
 '''
@@ -39,20 +39,20 @@ OPERADORES DESCRIÇÃO
 lambda args:                   expressão Geração de função anônima
 x or y                         OU
 x and y                        AND 
-not x						   NOT
+not x                          NOT
 x < y, x <= y, x > y,          Operadores de comparação, igualdade, testes de identidade,
-x >= y, x == y, x <> y, 	   e participação como membro de sequência
+x >= y, x == y, x <> y,        e participação como membro de sequência
 x != y, x is y, x is not y,
 x in y, x not in y
-x | y						   OU bit
-x ^ y  						   OU exclusivo bit
-x & y						   E bit
-x << y, x >> y				   Deslocamento de bits
--x + y, x - y				   Adição, subtração
+x | y                          OU bit
+x ^ y                          OU exclusivo bit
+x & y                          E bit
+x << y, x >> y                 Deslocamento de bits
+-x + y, x - y                  Adição, subtração
 x * y, x % y, x / y, x // y    Multiplicação, resto, divisão
--x, +x, ~x, x ** y			   Negação, identidade, complemente bit, potência binária
+-x, +x, ~x, x ** y             Negação, identidade, complemente bit, potência binária
 x[i], x[i:j], x.attr, x(...)   Indexação, qualificação, chamadas de função
-(...), [...], {...}, '...' 	   Tupla, lista, dicionário, conversão para string
+(...), [...], {...}, '...'     Tupla, lista, dicionário, conversão para string
 '''
 
 # 40 + 3.14 -> resposta é convertida para tipo numérico mais complexos => ponto flutuante
@@ -63,7 +63,7 @@ b = 4
 a + 1
 print (a) 
 a - 1
-print (a)     	  # adição (3 + 1), subtração (3 - 1)
+print (a)         # adição (3 + 1), subtração (3 - 1)
 b * 3, b/2        # multiplicação (4*3), divisão (4/2)
 print (b)
 a % 2, b ** 2     # módulo (resto), potenciação
@@ -76,9 +76,9 @@ b / (2.0 + a)          # saída de eco automática (mais dígitos) : 0.800000000
 print (b / (2.0 + a))  # saída print arredonda os dígitos : 0.8
 
 num = 1 / 3.0		# 0.3333333333333331
-print (num) # ecoa	# 0.33333333 print arredondado
-"%e" % num     # 3.333333e-001' formatação de string 
-"%2.2f" % num  # '0.33' formatação de string
+print (num)         # ecoa 0.33333333 print arredondado
+"%e" % num          # 3.333333e-001' formatação de string 
+"%2.2f" % num       # '0.33' formatação de string
 
 # X / Y	Divisão clássica - mantem o resto, independente dos tipos
 # X // Y Divisão na base - operador trunca os restos fracionários em suas bases, independente dos tipos
@@ -156,7 +156,7 @@ math.pi # 3.141592653589793
 math.e  # 2.718281828459045
 
 math.sin(2*math.pi/180)                   # 0.03489949670250097
-abs(-42), 2**4, pow(2, 4) 				  # (42, 16, 16)
+abs(-42), 2**4, pow(2, 4)                 # (42, 16, 16)
 int(2.567), round(2.567), round(2.567, 2) # (2, 3, 2.5699999999999999998) - 2.57 no print
 
 
