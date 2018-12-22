@@ -112,6 +112,8 @@ L # [[]]
 #    Categoria mutável mapeamento;
 #    Tabelas de referências de objetos (tabelas de hashing);
 
+# DICIONÁRIOS EM AÇÃO
+
 '''
 OPERAÇÃO INTERPRETAÇÃO
 D1 = {}                              Dicionário vazio
@@ -130,6 +132,92 @@ D2[key] = 42                         Adição/alteração
 del D2[key]                          Exclusão
 D4 = dict(zip(keylist, valslist))    Construção (CAP 10)
 '''
+
+# Operações Básicas de Dicionário
+d2 = {'spam': 2, 'ham': 1, 'eggs': 3} # faz um dicionário
+d2['spam']                            # busca valor pela chave = 2
+d2                                    # = {'ham': 1, 'eggs': 3, 'spam': 2} - a ordem é misturada (HASHING)
+
+len(d2)           # número de entradas no dicionário = 3
+d2.has_key('ham') # teste de participação da chave como membro (1 = true) = 1
+'ham' in d2       # teste alternativo de participação da chave como membro = 1
+d2.keys()         # cria uma nova lista de minhas chaves = ['eggs', 'ham', 'spam']
+
+# Alterando dicionários no local
+d2['ham'] = ['grill', 'bake', 'fry'] # altera entrada
+d2                                   # {'eggs': 3, 'spam': 2, 'ham': [grill', 'bake', 'fry]}
+del d2['eggs']                       # exclui entrada
+d2                                   # {'spam': 2, 'ham': [grill', 'bake', 'fry]}
+d2['brunch'] = 'Bacon'               # adiciona nova entrada
+d2                                   # {'brunch': 'bacon', 'spam': 2, 'ham': [grill', 'bake', 'fry]}
+
+# Mais métodos de dicionário
+d2.values(), d2.items()                              # ([3, 1, 2], [('eggs', 3), ('ham', 1), ('spam', 2)])
+d2.get('spam'), d2.get('toast'), d2.get('toast', 88) # (2, None, 88) - se não tiver na lista retorna NONE ou um padrão passado (88)
+
+d2 # {'eggs': 3, 'ham': 1, 'spam': 2} 
+d3 = {'toast': 4, 'muffin': 5}
+d2.update(d3)
+d2 # {'toast': 4, 'muffin': 5, 'eggs': 3, 'ham': 1, 'spam': 2}
+
+# Uma Tabela de Linguagens
+table = {'Python': 'Guido van Rossum',
+...      'perl'  : 'Larry Wall',
+...      'Tcl'   : 'John Ousterhout'}
+
+language = 'Python'
+creator  = table[language]
+creator # 'Guido van Rossum'
+for lang in table.keys():
+...    print lang, '\t', table[lang]
+...
+'''
+Python Guido van Rossum
+Tcl    John Ousterhout
+perl   Larry Wall
+'''
+
+# NOTAS SOBRE UTILIZAÇÃO DE DICIONÁRIOS
+# * OPERAÇÕES DE SEQUÊNCIA NÃO FUNCIONAM: dicionários são mapeamentos e não sequenciais.
+# Não há ordenação, nem fracionamento, por exemplo. 
+# * ATRIBUIÇÃO A NOVOS ÍNDICES ADICIONA ENTRADAS: 
+# * AS CHAVES NEM SEMPRE PRECISAM SER STRINGS:
+
+
+# Usando Dicionários para Simular Listas Flexíveis
+# Usando chaves inteiras, os dicionários podem simular listas que parecem crescer em atribuição de deslocamento:
+D = {}
+D[99] = 'spam'
+D[99] # 'spam'
+D     # {99: 'spam'} 
+
+# Usando Dicionários para Estruturas de Dados Esparsas
+Matrix = {}         # array tridimensional onde todas as posições são vazias exceto duas
+Matrix[(2, 3, 4)] = 88
+Matrix[(7, 8, 9)] = 99
+X = 2; Y = 3; Z = 4 # ; separa instruções
+Matrix[(X, Y, Z)]   # = 88
+Matrix              # {(2, 3, 4): 88, (7, 8, 9): 99}
+
+if Matrix.has_key((2, 3, 6)): # varifica a existência da chave antes de buscar
+print Matrix[(2, 3, 6)]
+else:
+print 0 
+# 0
+try:
+print Matrix[(2, 3, 6)] # tenta indexar
+except keyError:
+print 0
+# 0
+Matrix.get((2, 3, 4), 0) # existe; busca e retorna
+# 88
+Matrix.get((2, 3, 6), 0) # não existe; usa arg padrão
+# 0
+
+# Usando Dicionários Como "Registros"
+rec = {}
+rec['name'] = 'mel'
+rec['age']
 
 
 
