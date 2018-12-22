@@ -39,7 +39,7 @@ len([1, 2, 3])              # Comprimento = 3
 [1, 2, 3] + [4, 5, 6]       # Concatenação = [1, 2, 3, 4, 5, 6]
 ['Ni!'] * 4                 # Repetição = ['Ni!','Ni!', 'Ni!', 'Ni!']
 3 in [1, 2, 3]              # Participação como membro = 1 (significa TRUE)
-for x in [1, 2, 3]: print x # Iteração = 1 2 3 
+for x in [1, 2, 3]: print (x) # Iteração = 1 2 3 
 
 '[1, 2]' + "34"     # '[1, 2]34'
 [1, 2] + list("34") # [1, 2, '3', '4']
@@ -54,9 +54,9 @@ matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]] # array bidimensional 3 x 3
 matrix[1]    # [4, 5, 6]
 matrix[1][1] # 5
 matrix[2][0] # 7
-matrix[[1, 2, 3],
-...    [4, 5, 6],
-...    [7, 8, 9]]
+# matrix[ [1, 2, 3],
+#         [4, 5, 6],
+#         [7, 8, 9]]
 matrix[1][1] # 5
 # NumPy - fornece também outras maneiras de manipular matrizes
 
@@ -121,7 +121,7 @@ D2 = {'spam': 2, 'eggs': 3}          Dicionário de dois itens
 D3 = {'food': {'ham': 1, 'eggs': 2}  Aninhamento
 D2['eggs']                           Indexação pela chave
 D3['food']['ham']
-D2.has_key('eggs'), 'eggs' in D2     Métodos: teste de participação como membro,
+D2.has_key('eggs'), 'eggs' in D2     Métodos: teste de participação como membro, (NÃO FUNCIONA NA VERSÃO 3 DO PYTHON)
 D2.keys()                            listas de chaves, lista de valores, cópias, padrões, intercalação, etc.
 D2.values()
 D2.copy()
@@ -139,7 +139,7 @@ d2['spam']                            # busca valor pela chave = 2
 d2                                    # = {'ham': 1, 'eggs': 3, 'spam': 2} - a ordem é misturada (HASHING)
 
 len(d2)           # número de entradas no dicionário = 3
-d2.has_key('ham') # teste de participação da chave como membro (1 = true) = 1
+# d2.has_key('ham') # teste de participação da chave como membro (1 = true) = 1
 'ham' in d2       # teste alternativo de participação da chave como membro = 1
 d2.keys()         # cria uma nova lista de minhas chaves = ['eggs', 'ham', 'spam']
 
@@ -162,15 +162,15 @@ d2 # {'toast': 4, 'muffin': 5, 'eggs': 3, 'ham': 1, 'spam': 2}
 
 # Uma Tabela de Linguagens
 table = {'Python': 'Guido van Rossum',
-...      'perl'  : 'Larry Wall',
-...      'Tcl'   : 'John Ousterhout'}
+        'perl'  : 'Larry Wall',
+        'Tcl'   : 'John Ousterhout'}
 
 language = 'Python'
 creator  = table[language]
 creator # 'Guido van Rossum'
 for lang in table.keys():
-...    print lang, '\t', table[lang]
-...
+    print (lang, '\t', table[lang])
+
 '''
 Python Guido van Rossum
 Tcl    John Ousterhout
@@ -199,16 +199,19 @@ X = 2; Y = 3; Z = 4 # ; separa instruções
 Matrix[(X, Y, Z)]   # = 88
 Matrix              # {(2, 3, 4): 88, (7, 8, 9): 99}
 
+''''
 if Matrix.has_key((2, 3, 6)): # varifica a existência da chave antes de buscar
-print Matrix[(2, 3, 6)]
+	print (Matrix[(2, 3, 6)])
 else:
-print 0 
+	print (0) 
 # 0
+
 try:
-print Matrix[(2, 3, 6)] # tenta indexar
-except keyError:
-print 0
+	print (Matrix[(2, 3, 6)]) # tenta indexar
+except keyError: # não definido - não compila código
+	print (0)
 # 0
+'''
 Matrix.get((2, 3, 4), 0) # existe; busca e retorna
 # 88
 Matrix.get((2, 3, 6), 0) # não existe; usa arg padrão
@@ -219,21 +222,14 @@ rec = {}
 rec['name'] = 'mel'
 rec['age'] = 41
 rec['job'] = 'trainer/writer'
-print rec['name'] # mel
+print (rec['name']) # mel
 
-mel = {'name': 'Mark',
-...    'jobs': ['trainer/writer'],
-...    'web' : 'www.com',
-...    'home': {'state': 'CO', 'zip': 8281730 }}
+mel = { 'name': 'Mark', 
+		'jobs': ['trainer/writer'], 
+		'web' : 'www.com', 
+		'home': {'state': 'CO', 'zip': 8281730 }}
 
 mel['name']        # 'Mark'
 mel['jobs']        # 'trainer/writer'
-mel['jobs'][1]     # 'writer'
+mel['jobs'][0]     # 'writer'
 mel['home']['zip'] # 8281730
-
-
-
-
-
-
-

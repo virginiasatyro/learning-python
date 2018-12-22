@@ -12,3 +12,11 @@ output.write(S)                 Grava a string S no arquivo
 output.writelines(L)            Grava no arquivo todas as strings da linha da lista
 output.close()                  Fechamento manual 
 '''
+
+myfile = open('myfile', 'w')      # abre para saída (cria)
+myfile.write('hello text file\n') # grava uma linha de texto
+myfile.close()
+
+myfile = open('myfile', 'r') # abre para entrada
+myfile.readline()            # lê a linha de volta = 'hello text file\n'
+myfile.readline()            # string vazia: fim do arquivo

@@ -1,3 +1,5 @@
+# ATENÇãO >> problemas de compilação devido ao unicode - provavelmente por causa de diferença de versão do python
+
 '''
 OPERAÇÃO                   INTERPRETAÇÃO
 s1 = ' '                   String vazia
@@ -90,7 +92,7 @@ unicode('spam') # de normal para unicode
 # Unicode é projetado para manipular caracteres de vários bytes
 u'ab\x20cd'       # caracteres de 8 bits\1 bytes = u'ab cd'
 u'ab\u0020cd'     # caracteres de 2 bytes = u'ab cd'
-u'ab\U00000020cd' # caracteres de 4 bytes = u'ab cd'
+u'ab\U00000020cd' # caracteres de 4 bytes = u'ab cd
 
 
 # STRINGS EM AÇÃO
@@ -98,11 +100,11 @@ len('abc')    # Comprimento = 3
 'abc' + 'def' # Concatenação = 'abcdef'
 'Ni!' * 4     # Repetição: 'Ni!Ni!Ni!Ni!'
 
-print '-------...sequencia...-------' # 80 traços do jeito difícil
-print '-' * 80 # 80 traços do jeito fácil
+print ('-------...sequencia...-------') # 80 traços do jeito difícil
+print ('-' * 80) # 80 traços do jeito fácil
 
 myjob = "hacker"
-for c in myjob: print c # percorre os itens = h a c k e raise
+for c in myjob: print (c) # percorre os itens = h a c k e raise
 "k" in myjob # 1 significa true = 1 
 "z" in myjob # 0 significa false = 0
 

@@ -48,4 +48,4 @@ T    # ('aa', 'bb', 'cc', 'dd')
 T = (1, [2, 3], 4) # funciona
 T[1][0] = 'spam' 
 T                  # (1, ['spam', 3], 4)
-T[1] = 'spam'      # falha
+# T[1] = 'spam'      # falha
