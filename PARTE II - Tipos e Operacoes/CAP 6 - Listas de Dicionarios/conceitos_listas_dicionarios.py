@@ -217,8 +217,19 @@ Matrix.get((2, 3, 6), 0) # não existe; usa arg padrão
 # Usando Dicionários Como "Registros"
 rec = {}
 rec['name'] = 'mel'
-rec['age']
+rec['age'] = 41
+rec['job'] = 'trainer/writer'
+print rec['name'] # mel
 
+mel = {'name': 'Mark',
+...    'jobs': ['trainer/writer'],
+...    'web' : 'www.com',
+...    'home': {'state': 'CO', 'zip': 8281730 }}
+
+mel['name']        # 'Mark'
+mel['jobs']        # 'trainer/writer'
+mel['jobs'][1]     # 'writer'
+mel['home']['zip'] # 8281730
 
 
 
