@@ -114,12 +114,67 @@ while True:
 'Hello world!'.startswith('Hello world!') # True
 'Hello world!'.endswith('Hello world!')   # True
 
+', '.join(['cats', 'rats', 'bats'])       # 'cats, rats, bats'
+' '.join(['My', 'name', 'is', 'Simon'])   # 'My name is Simon'
+'ABC'.join(['My', 'name', 'is', 'Simon']) # 'MyABCnameABCisABCSimon'
 
+'My name is Simon'.split()            # ['My', 'name', 'is', 'Simon']
+'MyABCnameABCisABCSimon'.split('ABC') # ['My', 'name', 'is', 'Simon']
+'My name is Simon'.split('m')         # ['My na', 'e is Si', 'on']
 
+spam = '''Dear Alice,
+How have you been? I am fine.
+There is a container in the fridge
+that is labeled "Milk Experiment".
+Please do not drink it.
+Sincerely,
+Bob'''
+print(spam)
+spam.split('\n') # ['Dear Alice,', 'How have you been? I am fine.', 'There is a container in the
+# fridge', 'that is labeled "Milk Experiment".', '', 'Please do not drink it.', 'Sincerely,', 'Bob']
 
+'Hello'.rjust(10)       # ' Hello'
+'Hello'.rjust(20)       # ' Hello'
+'Hello World'.rjust(20) # ' Hello World'
+'Hello'.ljust(10)       # 'Hello '
 
+'Hello'.rjust(20, '*') # '***************Hello'
+'Hello'.ljust(20, '-') # 'Hello---------------'
 
+'Hello'.center(20)      # ' Hello '
+'Hello'.center(20, '=') # '=======Hello========'
 
+def printPicnic(itemsDict, leftWidth, rightWidth):
+	print('PICNIC ITEMS'.center(leftWidth + rightWidth, '-'))
+	for k, v in itemsDict.items():
+		print(k.ljust(leftWidth, '.') + str(v).rjust(rightWidth))
 
+picnicItems = {'sandwiches': 4, 'apples': 12, 'cups': 4, 'cookies': 8000}
+printPicnic(picnicItems, 12, 5)
+printPicnic(picnicItems, 20, 6)
+''' Output:
+---PICNIC ITEMS--
+sandwiches.. 4
+apples...... 12
+cups........ 4
+cookies..... 8000
+-------PICNIC ITEMS-------
+sandwiches.......... 4
+175
+apples.............. 12
+cups................ 4
+cookies............. 8000
+'''
 
+# strip(), rstrip() e lstrip()
+spam = ' Hello World '
+spam.strip()  # 'Hello World' - retira espaços vazios
+spam.lstrip() # 'Hello World '
+spam.rstrip() # ' Hello World'
 
+spam = 'SpamSpamBaconSpamEggsSpamSpam'
+spam.strip('ampS') # 'BaconSpamEggs - remove ocoreência de 'a' 'm' 'p' 'S'
+
+import pyperclip
+pyperclip.copy('Hello world!')
+pyperclip.paste() # 'Hello world!'
