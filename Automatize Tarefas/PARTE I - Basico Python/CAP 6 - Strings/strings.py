@@ -175,6 +175,8 @@ spam.rstrip() # ' Hello World'
 spam = 'SpamSpamBaconSpamEggsSpamSpam'
 spam.strip('ampS') # 'BaconSpamEggs - remove ocoreência de 'a' 'm' 'p' 'S'
 
+''' Como utilizar pyperclip?
 import pyperclip
 pyperclip.copy('Hello world!')
+'''
 pyperclip.paste() # 'Hello world!'

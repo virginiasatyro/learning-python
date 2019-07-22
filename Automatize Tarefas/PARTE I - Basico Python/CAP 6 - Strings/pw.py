@@ -5,7 +5,7 @@ dessa conta será copiada para o clipboard para que o usuário possa colá-la em
 um campo de Senha. Dessa maneira, o usuário poderá ter senhas longas e
 complexas sem a necessidade de memorizá-las.
 '''
-
+# Como utilizar pyperclip????
 #! python3
 # pw.py – Um programa para repositório de senhas que não é seguro.
 PASSWORDS = {'email': 'F7minlBDDuvMJuxESSKHFhTxFtjVB6',

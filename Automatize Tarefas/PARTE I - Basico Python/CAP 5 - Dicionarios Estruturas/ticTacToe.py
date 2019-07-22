@@ -22,3 +22,5 @@ for i in range(9):
 		turn = 'X'
 	
 printBoard(theBoard)
+
+# http://nostarch.com/automatestuff/

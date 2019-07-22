@@ -1,3 +1,7 @@
+'''
+ATENCAO: pyperclip não funciona!!!
+'''
+
 #! python3
 # bulletPointAdder.py – Acrescenta marcadores da Wikipedia no início
 # de cada linha de texto do clipboard.
