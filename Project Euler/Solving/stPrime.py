@@ -22,20 +22,20 @@ def isPrime(num):
 	else:
 		return False 
 		
-evenNumbers = [2]
-EVEN_MAX = 5000 # 10001
+primeNumbers = [2]
+PRIME_MAX = 10001
 aux = True
 count = 0 
 i = 3 
 
 while aux == True:
 	if isPrime(i) == True:
-		evenNumbers.append(i)
+		primeNumbers.append(i)
 		count += 1
 	i += 2 
-	if count == EVEN_MAX - 1:
+	if count == PRIME_MAX - 1:
 		aux = False
 		break 
 	
-print(evenNumbers)
-print(evenNumbers[-1])
+print(primeNumbers)
+print(primeNumbers[-1]) # 104743

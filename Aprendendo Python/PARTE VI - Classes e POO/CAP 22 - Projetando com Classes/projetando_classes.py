@@ -125,22 +125,3 @@ CLASSES
 	* são usadas por meio de chamadas
 	* sempre residem dentro de um módulo
 '''
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
