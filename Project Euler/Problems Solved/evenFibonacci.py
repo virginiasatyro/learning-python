@@ -36,3 +36,10 @@ def sumEven(list_fib):
 	return sum_even 
 				
 print(sumEven(fibonacci)) # 4613732
+
+'''
+1 1 2 3 5 8 13 21 34 55 89 144 ...
+It is easy to prove that every third Fibonacci number is even.
+2 8 34 144...
+it seems that they obey the following recursive relation: E(n)=4*E(n-1)+E(n-2).
+'''

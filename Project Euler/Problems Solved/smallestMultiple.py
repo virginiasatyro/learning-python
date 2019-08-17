@@ -23,3 +23,5 @@ def smallest():
 
 number = smallest()		
 print(number) # 232792560
+
+# esse algoritmo pode ser melhorado, vide pdf.
