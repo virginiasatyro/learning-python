@@ -102,3 +102,10 @@ Find the sum of all numbers which are equal to the sum of the factorial of their
 Note: as 1! = 1 and 2! = 2 are not sums they are not included.
 ```
 [Solution](https://github.com/virginiasatyro/Python/blob/master/Project%20Euler/Problems%20Solved/digitFactorials.py)
+
+### 48) Self powers
+```
+The series, 1^1 + 2^2 + 3^3 + ... + 10^10 = 10405071317.
+Find the last ten digits of the series, 1^1 + 2^2 + 3^3 + ... + 1000^1000.
+```
+[Solution](https://github.com/virginiasatyro/Python/blob/master/Project%20Euler/Problems%20Solved/selfPowers.py)
