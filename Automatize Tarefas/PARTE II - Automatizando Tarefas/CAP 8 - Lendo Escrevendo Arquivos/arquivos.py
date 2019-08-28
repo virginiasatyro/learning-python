@@ -131,7 +131,113 @@ print(os.path.isfile('C:\\Windows\\System32\\calc.exe')) # True
 
 print(os.path.exists('D:\\')) # True - tem um DVD ou pen drive 
 
+
 # Processo de leitura/escrita
+'''
+* Arquivos em formato texto simples (plaintext files) contêm
+somente caracteres básicos de texto e não incluem informações sobre fonte,
+tamanho ou cor. Os arquivos-texto com extensão .txt ou arquivos de scripts
+Python com extensão .py são exemplos de arquivos em formato texto simples.
+Eles podem ser abertos com o aplicativo Notepad do Windows ou com o
+TextEdit do OS X. Seus programas poderão ler facilmente o conteúdo de
+arquivos em formato texto simples e tratá-los como um valor normal de
+string.
+* Os arquivos binários correspondem a todos os demais tipos de arquivos, por
+exemplo, documentos de processadores de texto, PDFs, imagens, planilhas e
+programas executáveis. Se você abrir um arquivo binário no Notepad ou no
+TextEdit, seu conteúdo parecerá uma confusão sem sentido,
+'''
+
+# Abrindo arquivos com a função open()
+helloFile = open('C:\\GitHub\\Python\\Automatize Tarefas\\PARTE II - Automatizando Tarefas\\CAP 8 - Lendo Escrevendo Arquivos\\hello.txt') # escrita de arquivos voltada para Windows
+print(helloFile) # <_io.TextIOWrapper name='C:\\GitHub\\Python\\Automatize Tarefas\\PARTE II - Automatizando Tarefas\\CAP 8 - Lendo Escrevendo Arquivos\\hello.txt' mode='r' encoding='cp1252'>
+# A chamada a open() retorna um objeto File. Um objeto File representa um arquivo em seu computador;
+
+# Lendo o conteúdo dos arquivos
+helloContent = helloFile.read() # Se você pensar no conteúdo de um arquivo como um único valor de string extenso, o método read() retornará a string armazenada no arquivo.
+print(helloContent) # print do conteúdo do arquivo
+
+helloContent2 = open('hello.txt')
+print(helloContent2.readlines()) # ['hello\n', 'world']
+# Observe que cada um dos valores de string termina com um caractere \n de quebra de linha, exceto a última linha do arquivo.
+
+# Escrevendo em arquivos
+baconFile = open('bacon.txt', 'w') # cria o arquivo e abre em modo de escrita 
+baconFile.write('Hello world!\n')
+baconFile.close()
+
+baconFile = open('bacon.txt', 'a') # append - abre o arquivo em modo de edição
+baconFile.write('Bacon is not a vagetable.')
+baconFile.close()
+
+baconFile = open('bacon.txt')
+content = baconFile.read()
+baconFile.close()
+print(content)
+# Hello world!
+# Bacon is not a vagetable.
+
+# Salvando variáveis com o módulo shelve
+'''
+Você pode salvar variáveis em seus programas Python em arquivos shelf
+binários usando o módulo shelve. Dessa maneira, seu programa poderá
+restaurar dados em variáveis que estão no disco rígido. O módulo shelve
+permitirá adicionar funcionalidades Save (Salvar) e Open (Abrir) em seu
+programa.
+'''
+
+import shelve
+shelfFile = shelve.open('mydata')
+cats = ['Zophie', 'Pooka', 'Simon']
+shelfFile['cats'] = cats 
+shelfFile.close()
+# Após executar o código anterior no Windows, você verá três novos arquivos no diretório de trabalho atual: mydata.bak, mydata.dat e mydata.dir.
+# No OS X, somente um único arquivo mydata.db será criado.
+
+shelfFile = shelve.open('mydata')
+print(type(shelfFile)) # <class 'shelve.DbfilenameShelf'>
+print(list(shelfFile.values())) # [['Zophie', 'Pooka', 'Simon']]
+shelfFile.close()
+
+
+# Salvando variáveis com a função pprint.pformat()
+'''
+Lembre-se da seção “Apresentação elegante”, em que a função pprint.pprint()
+fazia uma apresentação elegante (“pretty print”) do conteúdo de uma lista ou
+de um dicionário na tela, enquanto a função pprint.pformat() retornava o
+mesmo texto na forma de uma string em vez de exibi-la.
+A chamada a pprint.pformat() fornecerá uma string que poderá
+ser gravada em um arquivo .py. Esse arquivo será seu próprio módulo, que
+poderá ser importado sempre que você quiser usar as variáveis armazenadas
+nele.
+'''
+import pprint
+cats = [{'name': 'Zophie', 'desc': 'chubby'}, {'name': 'Pooka', 'desc': 'fluffy'}]
+pprint.pformat(cats)
+fileObj = open('myCats.py', 'w')
+fileObj.write('cats = ' + pprint.pformat(cats) + '\n')
+fileObj.close()
+''' 
+Temos uma lista de dicionários armazenada em uma variável cats. Para manter a lista
+em cats disponível mesmo após termos fechado o shell, utilizamos
+pprint.pformat() para retorná-la como uma string. Depois que tivermos os
+dados em cats na forma de uma string, será fácil gravar a string em um
+arquivo que chamaremos de myCats.py.
+Escreve no arquivo criado myCats.py:
+cats = [{'desc': 'chubby', 'name': 'Zophie'}, {'desc': 'fluffy', 'name': 'Pooka'}]
+'''
+'''
+Como os scripts Python em si são apenas arquivos-texto com a extensão de
+arquivo .py, seus programas Python podem até mesmo gerar outros programas
+Python. Esses arquivos podem ser então importados em scripts.
+'''
+import myCats
+print(myCats.cats) # [{'desc': 'chubby', 'name': 'Zophie'}, {'desc': 'fluffy', 'name': 'Pooka'}]
+print(myCats.cats[0]) # {'name': 'Zophie', 'desc': 'chubby'}
+print(myCats.cats[0]['name']) # 'Zophie'
+
+
+
 
 
 
