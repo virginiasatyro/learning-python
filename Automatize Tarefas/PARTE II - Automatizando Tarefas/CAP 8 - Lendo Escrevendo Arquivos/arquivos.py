@@ -39,7 +39,7 @@ os.getcwd() # 'C:\\Windows\\System32  -> obtem diretório
 Há duas maneiras de especificar um path de arquivo.
 • Um path absoluto, que sempre começa com a pasta-raiz.
 • Um path relativo, que é relativo ao diretório de trabalho atual do programa.
-'''
+''' 
 
 # Criando novas pastas com os.makedirs()
 '''
