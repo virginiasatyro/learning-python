@@ -3,11 +3,11 @@ A repository to help me learn Python. Here are the annotations from books I'm re
 
 ## [Aprendendo Python](https://github.com/virginiasatyro/learning-python/tree/master/aprendendo-python-pt-br)
 
-![Livro Aprendendo Python](img/aprendendo-python.jpg)
+<img src="img/aprendendo-python.jpg" alt="Aprendendo Python" width="300"/>
 
 ## [Automatize Tarefas Maçantes Com Python](https://github.com/virginiasatyro/learning-python/tree/master/automatize-tarefas-pt-br)
 
-![Automatize Tarefas Maçantes Com Python](img/automatize-python.jpg)
+<img src="img/automatize-python.jpg" alt="Automatize Tarefas Maçantes Com Python" width="300"/>
 
 ### Sumário
 
@@ -39,7 +39,7 @@ https://www.coursera.org/
 
 ## [Pense em Python](https://github.com/virginiasatyro/learning-python/tree/master/pense-em-python-pt-br)
 
-![Pense em Python](img/think-python.jpg)
+<img src="img/think-python.jpg" alt="Pense em Python" width="300"/>
 
 ### Sumário
 
