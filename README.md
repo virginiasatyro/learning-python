@@ -44,25 +44,25 @@ https://www.coursera.org/
 ### Sumário
 
 - Prefácio
-- 1. A jornada do programa
-- 2. Variáveis, expressões e instruções
-- 3. Funções
-- 4. Estudo de caso: projeto de interface
-- 5. Condicionais e recursividade
-- 6. Funções com resultado
-- 7. Iteração
-- 8. Strings
-- 9. Estudo de caso: jogos de palavras
-- 10. Listas
-- 11. Dicionários
-- 12. Tuplas
-- 13. Estudo de caso: seleção de estrutura de dados
-- 14. Arquivos
-- 15. Classes e objetos
-- 16. Classes e funções
-- 17. Classes e métodos
-- 18. Herança
-- 19. Extra
+- Capítulo 1. A jornada do programa
+- Capítulo 2. Variáveis, expressões e instruções
+- Capítulo 3. Funções
+- Capítulo 4. Estudo de caso: projeto de interface
+- Capítulo 5. Condicionais e recursividade
+- Capítulo 6. Funções com resultado
+- Capítulo 7. Iteração
+- Capítulo 8. Strings
+- Capítulo 9. Estudo de caso: jogos de palavras
+- Capítulo 10. Listas
+- Capítulo 11. Dicionários
+- Capítulo 12. Tuplas
+- Capítulo 13. Estudo de caso: seleção de estrutura de dados
+- Capítulo 14. Arquivos
+- Capítulo 15. Classes e objetos
+- Capítulo 16. Classes e funções
+- Capítulo 17. Classes e métodos
+- Capítulo 18. Herança
+- Capítulo 19. Extra
 - Apêndice A: Depuração
 - Apêndice B: Análise de algoritmos
 - Colofão / Sobre o Autor
